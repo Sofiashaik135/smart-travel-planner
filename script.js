@@ -1,5 +1,4 @@
-const API_URL = "http://127.0.0.1:5000";
-
+const API_URL = "https://smart-travel-planner-9vu5.onrender.com";
 
 const tripForm = document.getElementById("tripForm");
 
