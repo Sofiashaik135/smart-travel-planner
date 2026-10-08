@@ -6,18 +6,13 @@ import os
 # DATABASE LOCATION
 # ==========================================
 
-BASE_DIR = os.path.dirname(
-    os.path.dirname(
-        os.path.abspath(__file__)
-    )
-)
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
-DB_PATH = os.path.join(
-    BASE_DIR,
-    "database",
-    "travel.db"
-)
+DB_DIR = os.path.join(BASE_DIR, "database")
 
+os.makedirs(DB_DIR, exist_ok=True)
+
+DB_PATH = os.path.join(DB_DIR, "travel.db")
 
 # ==========================================
 # DATABASE CONNECTION
