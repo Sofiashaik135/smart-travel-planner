@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AI Smart Travel Planner</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <div class="container nav">
+
+        <h1>✈️ Smart Travel Planner</h1>
+
+        <nav>
+            <a href="#planner">Plan Trip</a>
+            <a href="#recommendations">Recommendations</a>
+            <a href="#saved">Saved Trips</a>
+        </nav>
+
+    </div>
+</header>
+
+
+<main>
+
+<section class="hero">
+
+    <div class="container">
+
+        <h2>Plan Your Perfect Trip</h2>
+
+        <p>
+            Tell us where you are starting from, where you want to go,
+            and what you want from your trip.
+        </p>
+
+        <a href="#planner" class="button">
+            Start Planning
+        </a>
+
+    </div>
+
+</section>
+
+
+<section id="planner" class="section">
+
+<div class="container">
+
+<h2>🌍 Plan Your Trip</h2>
+
+<form id="tripForm">
+
+    <label>Starting Location</label>
+
+    <input
+        type="text"
+        id="startLocation"
+        placeholder="Example: Nellore"
+        required
+    >
+
+
+    <label>Destination</label>
+
+    <input
+        type="text"
+        id="destination"
+        placeholder="Example: Hyderabad"
+        required
+    >
+
+
+    <div class="row">
+
+        <div>
+
+            <label>Start Date</label>
+
+            <input
+                type="date"
+                id="startDate"
+                required
+            >
+
+        </div>
+
+
+        <div>
+
+            <label>End Date</label>
+
+            <input
+                type="date"
+                id="endDate"
+                required
+            >
+
+        </div>
+
+    </div>
+
+
+    <div class="row">
+
+        <div>
+
+            <label>Budget</label>
+
+            <div class="budget-row">
+
+                <select id="currency">
+
+                    <option value="₹">₹ INR - Indian Rupee</option>
+                    <option value="$">$ USD - US Dollar</option>
+                    <option value="€">€ EUR - Euro</option>
+                    <option value="£">£ GBP - British Pound</option>
+                    <option value="¥">¥ JPY - Japanese Yen</option>
+                    <option value="¥">¥ CNY - Chinese Yuan</option>
+                    <option value="₩">₩ KRW - South Korean Won</option>
+                    <option value="A$">A$ AUD - Australian Dollar</option>
+                    <option value="C$">C$ CAD - Canadian Dollar</option>
+                    <option value="CHF">CHF - Swiss Franc</option>
+                    <option value="د.إ">د.إ AED - UAE Dirham</option>
+                    <option value="﷼">﷼ SAR - Saudi Riyal</option>
+
+                </select>
+
+                <input
+                    type="number"
+                    id="budget"
+                    placeholder="Example: 10000"
+                    min="0"
+                    required
+                >
+
+            </div>
+
+        </div>
+
+
+        <div>
+
+            <label>Number of Travelers</label>
+
+            <input
+                type="number"
+                id="travelers"
+                min="1"
+                value="1"
+                required
+            >
+
+        </div>
+
+    </div>
+
+
+    <label>
+        Your Interests / Requirements
+    </label>
+
+    <textarea
+        id="interests"
+        rows="5"
+        placeholder="Example: I want beaches, good food, historical places, shopping and budget-friendly activities."
+        required
+    ></textarea>
+
+
+    <div class="buttons">
+
+        <button type="submit">
+            💾 Save Trip
+        </button>
+
+        <button
+            type="button"
+            id="recommendButton"
+        >
+            🤖 Get AI Recommendations
+        </button>
+
+    </div>
+
+</form>
+
+
+<p id="message"></p>
+
+</div>
+
+</section>
+
+
+<section id="recommendations" class="section">
+
+<div class="container">
+
+    <h2>🤖 Personalized Day-wise Plan</h2>
+
+    <div id="recommendationList">
+
+        <p>
+            Enter your trip details and click
+            "Get AI Recommendations".
+        </p>
+
+    </div>
+
+</div>
+
+</section>
+
+
+<section id="saved" class="section">
+
+<div class="container">
+
+    <h2>💾 Saved Trips</h2>
+
+    <div id="tripList">
+
+        <p>Loading saved trips...</p>
+
+    </div>
+
+</div>
+
+</section>
+
+</main>
+
+
+<footer>
+
+    <p>© 2026 Smart Travel Planner</p>
+
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
